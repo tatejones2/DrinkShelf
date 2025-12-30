@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.database import engine, Base
 from app.models import User, Bottle, Collection, TastingNote  # noqa: F401
+from app.api.routes import auth, users
 
 # Create tables (only if database is available)
 try:
@@ -28,6 +29,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(auth.router)
+app.include_router(users.router)
 
 
 # Health check endpoint

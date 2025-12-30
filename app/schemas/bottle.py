@@ -20,8 +20,8 @@ class BottleBase(BaseModel):
     country: Optional[str] = Field(None, max_length=100)
     release_year: Optional[int] = Field(None, ge=1800, le=2100)
     batch_number: Optional[str] = Field(None, max_length=100)
-    price_paid: Optional[Decimal] = Field(None, decimal_places=2)
-    price_current: Optional[Decimal] = Field(None, decimal_places=2)
+    price_paid: Optional[Decimal] = Field(None)
+    price_current: Optional[Decimal] = Field(None)
     acquisition_date: Optional[date] = None
     notes: Optional[str] = None
     rating: Optional[int] = Field(None, ge=1, le=5)
@@ -46,8 +46,8 @@ class BottleUpdate(BaseModel):
     country: Optional[str] = Field(None, max_length=100)
     release_year: Optional[int] = Field(None, ge=1800, le=2100)
     batch_number: Optional[str] = Field(None, max_length=100)
-    price_paid: Optional[Decimal] = Field(None, decimal_places=2)
-    price_current: Optional[Decimal] = Field(None, decimal_places=2)
+    price_paid: Optional[Decimal] = Field(None)
+    price_current: Optional[Decimal] = Field(None)
     acquisition_date: Optional[date] = None
     notes: Optional[str] = None
     rating: Optional[int] = Field(None, ge=1, le=5)
