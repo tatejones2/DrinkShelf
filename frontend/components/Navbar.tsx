@@ -39,6 +39,9 @@ export default function Navbar() {
                 <Link href="/collections" className="hover:text-amber-400 transition-colors">
                   Collections
                 </Link>
+                <Link href="/profile" className="hover:text-amber-400 transition-colors">
+                  Profile
+                </Link>
               </>
             ) : null}
           </div>
