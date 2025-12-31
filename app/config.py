@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:8080"]
 
     # Database
-    DATABASE_URL: str = "postgresql://postgres:password@localhost:5432/drinkshelf_dev"
+    DATABASE_URL: str = "sqlite:///./drinkshelf.db"
     DATABASE_POOL_SIZE: int = 10
     DATABASE_MAX_OVERFLOW: int = 20
 
